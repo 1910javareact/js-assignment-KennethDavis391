@@ -2,9 +2,8 @@
 Define function: fib(n) 
 Return the nth number in the fibonacci sequence. */
 function fib(n) {
-
     //prevent infinite loops by making sure it's calling a number in the sequence
-    if (n < 1){
+    if (n < 1 || typeof(n) !== "number"){
         console.log(`${n} is not a valid input`);
         return
     }
