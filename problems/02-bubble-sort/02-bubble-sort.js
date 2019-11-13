@@ -5,12 +5,12 @@ Return the sorted array. */
 function bubbleSort(numArray) {
     let newNumArray = [...numArray]
     //loop through a number of times equal to the array length
-    for(let i = 0; i < numArray.length; i++){
+    for(let i = 0; i < newNumArray.length; i++){
         let maxIndex = 0
         //loop through until you get to the numbers that are already sorted
         for(let j = 0; j < newNumArray.length - i; j++){
             //find the bigest value in the unsorted array
-            if(numArray[j] > newNumArray[maxIndex]){
+            if(newNumArray[j] > newNumArray[maxIndex]){
                 maxIndex = j
             }
         }
