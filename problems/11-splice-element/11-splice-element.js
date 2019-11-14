@@ -5,11 +5,11 @@ Splice the element at the provided index in the array.
 function spliceElement(someArr, index) {
     //spread to a new array
     newArr = [...someArr]
-    for( i = newArr.length - 1; i >= index; i--){
+    for( i = index; i < newArr.length; i++){
         //shift the values at index and to the right over one
-        newArr[i + 1] = newArr[i]
+        newArr[i] = newArr[i + 1]
     }
-    //insert the element
-    newArr[index] = "the element" //where does the element come from?
+    //remove the last element in the array so we don't get undefined
+    newArr.pop()
     return newArr
 }
