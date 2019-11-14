@@ -80,5 +80,3 @@ function printShape(shape, height, character) {
     }
   }
 }
-
-printShape("Diamond", 5, "*");
