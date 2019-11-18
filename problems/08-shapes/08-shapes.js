@@ -50,16 +50,18 @@ function printShape(shape, height, character) {
       //loop through to print height lines
       for(let i = 0; i < height; i++){
         let newLine = ""
-        //loop through making each line
+          //loop through making each line
+          //starting with the top half including the middle line
           if(i < height/2){
             //make spaces equal to the number of steps away from the middle you are
-            for(let j = 0; j < height/2 - 1 - i; j++){
+            for(let j = 0; j < (height - 1)/2 - i; j++){
               newLine = newLine.concat(" ")
             }
             //make characters equal to 1 plus 2 times the number of lines you've moved
             for(let j = 0; j < 2 * i + 1 ; j++){
               newLine = newLine.concat(character)
             }
+          //move on to the bottom half
           }else if(i > height/2){
             //make spaces equal to the number of steps away from the middle you are
             for(let j = 0; j < i - height / 2; j++){
@@ -70,6 +72,7 @@ function printShape(shape, height, character) {
               newLine = newLine.concat(character)
             }
           }
+        //print the completed line
         console.log(newLine);
       }
       break;
